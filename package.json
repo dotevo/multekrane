@@ -1,0 +1,28 @@
+{
+  "name": "multekrane",
+  "version": "0.0.1",
+  "main": "ĉefa.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "gulp test"
+  },
+  "repository": "https://github.com/dotevo/multekrane",
+  "keywords": [
+    "Electron",
+    "quick",
+    "start",
+    "tutorial",
+    "demo"
+  ],
+  "author": "GitHub",
+  "dependencies": {
+    "photon": "github:connors/photon",
+    "electron-prebuilt": "*"
+  },
+  "devDependencies": {
+    "electron": "^1.4.1",
+    "babel-eslint": "*",
+    "gulp-eslint" : "*",
+    "gulp": "*"
+  }
+}
