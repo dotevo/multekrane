@@ -1,16 +1,16 @@
-const {app, BrowserWindow, Tray} = require('electron')
+const {app, Tray} = require('electron')
+const Fenestro = require('./fontkodo/fenestro')
+const Apleto = require('./fontkodo/apleto')
 
 let fenestro
+let plato
 
 function kreiFenestron () {
-	fenestro = new BrowserWindow({width: 800, height: 600})
-	fenestro.loadURL(`file://${__dirname}/index.html`)
-	fenestro.on('close', function(){
-	})
+	fenestro = new Fenestro()
 }
 
 function kreiApleton() {
-	new Tray('resursoj/bildo.png')
+	plato = new Apleto({'fenestro':fenestro})
 }
 
 app.on('ready', kreiFenestron)
