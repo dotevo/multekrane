@@ -11,7 +11,8 @@
   ],
   "author": "Adam Jordanek",
   "dependencies": {
-    "electron": "*"
+    "electron": "*",
+    "xtend": "*"
   },
   "devDependencies": {
     "babel-eslint": "*",
