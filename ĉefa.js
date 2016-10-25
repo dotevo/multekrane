@@ -1,23 +1,10 @@
-const {app, Tray} = require('electron')
+const {app} = require('electron')
 const Fenestro = require('./fontkodo/fenestro')
 const Apleto = require('./fontkodo/apleto')
 
-let fenestro
-let plato
-
-function kreiFenestron () {
-	fenestro = new Fenestro()
+function krei() {
+	var fenestro = new Fenestro()
+	new Apleto({'fenestro':fenestro})
 }
 
-function kreiApleton() {
-	plato = new Apleto({'fenestro':fenestro})
-}
-
-app.on('ready', kreiFenestron)
-app.on('ready', kreiApleton)
-
-app.on('activate', () => {
-	if (fenestro === null) {
-		kreiFenestron()
-	}
-})
+app.on('ready', krei)

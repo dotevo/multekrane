@@ -8,19 +8,12 @@
   },
   "repository": "https://github.com/dotevo/multekrane",
   "keywords": [
-    "Electron",
-    "quick",
-    "start",
-    "tutorial",
-    "demo"
   ],
-  "author": "GitHub",
+  "author": "Adam Jordanek",
   "dependencies": {
-    "photon": "github:connors/photon",
-    "electron-prebuilt": "*"
+    "electron": "*"
   },
   "devDependencies": {
-    "electron": "^1.4.1",
     "babel-eslint": "*",
     "gulp-eslint" : "*",
     "gulp": "*"

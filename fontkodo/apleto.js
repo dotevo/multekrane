@@ -1,4 +1,4 @@
-const {Menu, Tray} = require('electron')
+const {Tray} = require('electron')
 
 class Apleto extends Tray{
 	constructor(options){
