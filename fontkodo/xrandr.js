@@ -12,7 +12,9 @@ class XRandR extends EventEmitter{
 	}
 
 	akiriEkranojn(revoko) {
-		if(!revoko) return;
+		if (!revoko) {
+			return;
+		}
 
 		infano.exec('xrandr', function (err, stdout) {
 			let linio = stdout.split('\n')
@@ -21,8 +23,8 @@ class XRandR extends EventEmitter{
 				let m = ex.re.exec(line)
 				if (m) {
 					let ekrano = {}
-					for(var i=0;i<m.length;++i){
-						if(ex.kampoj[i] != null) {
+					for (var i = 0;i < m.length;++i) {
+						if (ex.kampoj[i] != null) {
 							ekrano[ex.kampoj[i]] = m[i]
 						}
 					}
@@ -34,6 +36,5 @@ class XRandR extends EventEmitter{
 		});
 	}
 }
-
 
 module.exports = new XRandR()

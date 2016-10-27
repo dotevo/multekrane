@@ -1,12 +1,16 @@
-var gulp = require('gulp'),
-	eslint = require('gulp-eslint');
+const gulp = require('gulp')
+const eslint = require('gulp-eslint')
+const jscs = require('gulp-jscs')
+var stylish = require('gulp-jscs-stylish');
 
-gulp.task('lint', function () {
-	return gulp.src(['**/*.js'])
+var jsDosieroj = ['*.js', '**/*.js', '!node_modules/**/*.js']
+
+gulp.task('lint', function() {
+	return gulp.src(jsDosieroj)
 		.pipe(eslint())
-		.pipe(eslint.format())
-		.pipe(eslint.failOnError());
+		.pipe(jscs())
+		.pipe(stylish())
 });
 
-gulp.task('test', ['lint'], function () {
-});
+gulp.task('validigi', ['lint'], function () {
+})

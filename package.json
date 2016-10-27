@@ -3,12 +3,11 @@
   "version": "0.0.1",
   "main": "ĉefa.js",
   "scripts": {
-    "start": "electron .",
-    "test": "gulp test"
+    "iri": "electron .",
+    "validigi": "gulp validigi"
   },
   "repository": "https://github.com/dotevo/multekrane",
-  "keywords": [
-  ],
+  "keywords": [],
   "author": "Adam Jordanek",
   "dependencies": {
     "electron": "*",
@@ -16,7 +15,10 @@
   },
   "devDependencies": {
     "babel-eslint": "*",
-    "gulp-eslint" : "*",
-    "gulp": "*"
+    "gulp": "*",
+    "gulp-eslint": "*",
+    "gulp-jscs": "*",
+    "gulp-jscs-stylish": "^1.4.0",
+    "gulp-lintspaces": "*"
   }
 }
