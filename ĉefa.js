@@ -6,9 +6,13 @@ const Serĉilo = require('./fontkodo/serĉilo')
 new Serĉilo()
 
 const XRandR = require('./fontkodo/xrandr')
-XRandR.akiriEkranojn(function(ekranoj) {
-	console.log(ekranoj)
-})
+XRandR.on('preta', function(analizdatumoj) {
+	console.log(analizdatumoj)
+});
+
+XRandR.on('ŝanĝita', function(analizdatumoj) {
+	console.log('ŝanĝo')
+});
 
 function krei() {
 	var fenestro = new Fenestro()
